@@ -39,7 +39,7 @@ $email;
 $file_path;
 $password;
 $phone;
-$sql = "SELECT * from users inner join profiles on profiles.profile_user = users.user_id WHERE username = '$username'";
+$sql = "SELECT * from users inner join profiles on profiles.profile_user = users.id WHERE username = '$username'";
 
 $statement = $pdo->prepare($sql);
 $statement->execute();
