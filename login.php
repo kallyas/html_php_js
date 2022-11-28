@@ -40,7 +40,7 @@ try {
             if ($statement->rowCount() > 0) {
                 if ($username == $row['username'] && password_verify($password, $row['password'])) {
                     $_SESSION['username'] = $row['username'];
-                    $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['user_id'] = $row['id'];
 
                     header("Location: index.php");
                 } else {
